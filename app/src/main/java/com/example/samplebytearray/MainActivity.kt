@@ -22,8 +22,19 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    main()
                 }
             }
         }
+    }
+}
+
+fun main() {
+    val byte4096 = ByteArray(4096)
+    val byteArray = byteArrayOf(65, 66, 67)
+    println("${byte4096.size}") // size = 4096
+    println("${byteArray.size}") // size = 3
+    byteArray.forEach {
+        println("$it")
     }
 }
